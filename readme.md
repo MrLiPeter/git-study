@@ -69,3 +69,9 @@ git commit -m 修改文件测试
 git rm demo2.html
 ```
 删除后把项目文件添加到暂存区，再commit
+
+# 如何给文件重命名
+把demo3.html 重命名为home.html
+```
+git mv demo3.html home.html
+```
