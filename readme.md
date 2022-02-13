@@ -20,10 +20,11 @@ git commit -m 第一次上传文件
 ```
 git branch -M main
 ```
+其中 <<Your token>Your token>:是github上生成的认证身份token
 ```
 git remote add origin https://<Your token>@github.com/Your Name/study-git.git
 ```
-<Your token>:是github上生成的认证身份token
+把项目远程推送到git仓库
 ```
 git push -u origin main
 ```
@@ -57,3 +58,14 @@ git config --global --list
 git status
 ```
 ![图片2](/img/3.png)
+```
+git add .
+```
+```
+git commit -m 修改文件测试
+```
+# 如何删除项目中不需要的文件
+```
+git rm demo2.html
+```
+删除后把项目文件添加到暂存区，再commit
