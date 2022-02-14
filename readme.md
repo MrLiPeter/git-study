@@ -125,3 +125,55 @@ git reset --hard commitID
 ```
 git checkout commitID -- version.html
 ```
+# 标签管理
+在本地创建标签(默认加载最新一次的commit)
+```
+git tag v1.0
+```
+检查标签是否创建成功
+```
+git tag
+```
+```
+git log
+```
+给指定的某次commit添加标签
+```
+git tag v0.5 commitId
+```
+删除标签
+```
+git tag -d v0.5
+```
+把标签推送到远程仓库
+```
+git push origin v1.0
+```
+# 新建、切换、删除分支
+新建分支
+```
+git branch dev
+```
+查看有多少分支
+```
+git branch
+```
+切换分支
+```
+git checkout dev
+```
+删除分支
+```
+git branch -d test
+```
+注意：**无法删除当前所在分支**
+    **分支有commit操作无法删除(但能被强行删除)**
+
+创建新分支并切换到新分支
+```
+git checkout -b test
+```
+强行删除分支
+```
+git branch -D test
+```
