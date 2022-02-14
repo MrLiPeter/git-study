@@ -112,7 +112,16 @@ git diff
 git reset HEAD shop/demo4.html
 ```
 # 版本回退
-回退到上一个版本,一个^代表回退一个版本，两个代表回退两个
+- 整个项目回退
+方法一：回退到上一个版本,一个^代表回退一个版本，两个代表回退两个
 ```
-git reset --head HEAD^
+git reset --hard HEAD^
+```
+方法二：通过git log 拿到所有的commitID制定回退到某个版本
+```
+git reset --hard commitID
+```
+- 只回退某个文件
+```
+git checkout commitID -- version.html
 ```
