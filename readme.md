@@ -177,3 +177,4 @@ git checkout -b test
 ```
 git branch -D test
 ```
+# 合并分支
