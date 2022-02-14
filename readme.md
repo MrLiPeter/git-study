@@ -178,3 +178,7 @@ git checkout -b test
 git branch -D test
 ```
 # 合并分支
+把dev分支合并到当前分支(main)
+```
+git merge dev
+```
