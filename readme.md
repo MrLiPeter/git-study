@@ -98,6 +98,21 @@ git log --pretty=oneline shop/demo4.html
 git show a5a7e670a08dc9926e2ed6813a45d4ba6c80a659
 ```
 # 误操作的情况下进行一键还原
+还原到上一次提交的状态
 ```
-git check -- shop/demo4.html
+git checkout -- shop/demo4.html
+```
+找到与最后一次提交不同的地方
+```
+git diff
+```
+# 不再追踪时如何实现撤销追踪操作
+执行了git add .后文件会提交到暂存区，git会对文件进行追踪
+```
+git reset HEAD shop/demo4.html
+```
+# 版本回退
+回退到上一个版本,一个^代表回退一个版本，两个代表回退两个
+```
+git reset --head HEAD^
 ```
