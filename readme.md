@@ -75,3 +75,29 @@ git rm demo2.html
 ```
 git mv demo3.html home.html
 ```
+# 移动文件
+把demo4.html移动到shop文件夹下面
+```
+git mv demo4.html shop
+```
+把demo4.html移动到shop文件夹下面,并重命名为shop.html
+```
+git mv demo4.html shop/shop.html
+```
+# 查看文件前后变化
+- 查看某个文件的前后变化
+```
+git log -p shop/demo4.html
+```
+- 先查询出前一次提交的commiItD再查看修改了哪些内容
+```
+git log --pretty=oneline shop/demo4.html
+```
+执行后会看到一串commiItD:a5a7e670a08dc9926e2ed6813a45d4ba6c80a659
+```
+git show a5a7e670a08dc9926e2ed6813a45d4ba6c80a659
+```
+# 误操作的情况下进行一键还原
+```
+git check -- shop/demo4.html
+```
