@@ -199,3 +199,49 @@ git commit
 git commit -m 解决了冲突
 ```
 接着推送到远程就行了
+# 多人分支集成协作场景
+## 不同人想查看不同版本路线如何操作
+- 查看当前分支的版本路线
+```
+git log --oneline
+```
+- 查不同分支的版本路线
+```
+git log -oneline --graph
+```
+## 不同人想删除不想要的分支
+- 拉取所有远程仓库所有分支
+```
+git fetch
+```
+- 查看fetch后多了哪些分支
+```
+git branch av
+```
+- 删除远程的test1分支(删除前确认该分支代码已经合并)
+```
+git push origin --delete test1
+```
+## 不同人修改了相同文件如何处理
+- 配置本地项目的另外的操作者
+```
+git config --add --local user.name('zhangSan')
+```
+```
+git config --add --local user.email('zhangSan@email.com')
+```
+查看是否生效
+```
+git config --local --list
+```
+- 在本地创建分支并与远程的分支进行关联
+```
+git checkout -b test remotes/origin/test
+```
+思路：拉取远程分支 ——》commit ——》push
+# 扩展
+谷歌浏览器插件
+octotree --像编辑器一样树形结构显示github上的项目文件
+enhanced github --查看单个文件大小和下载
+gitzip for github --帮助你下载某个文件夹
+
